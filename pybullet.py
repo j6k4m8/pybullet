@@ -24,4 +24,3 @@ def pushSms(number, message):
     response = urllib2.urlopen(req)
     return response
 
-pushSms('9739039945', 'HI!')
