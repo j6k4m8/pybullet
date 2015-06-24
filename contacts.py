@@ -9,7 +9,7 @@ for c in range(len(_contacts)):
 
 def add_contact(name, number):
     with open('.contacts', 'a') as file:
-        file.write(name + "\t" + number)
+        file.write("\n" + name + "\t" + number)
         contacts[name] = number
 
 def get_number(name):
