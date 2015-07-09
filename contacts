@@ -26,7 +26,7 @@ def main(argv):
     if command == 'add':
         add_contact(argv[1], argv[2])
     elif command == 'list':
-        print '\t'.join(list_contacts())
+        print '\t'.join(list_contacts(argv[1] if len(argv) >1 else ''))
 
 if __name__ == "__main__":
     main(sys.argv[1:])
