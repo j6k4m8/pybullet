@@ -18,13 +18,19 @@ The `XXXXX` is your `user_iden`, the full string is your `device_iden`.
 
 # Usage
 **Send a message to a phonenumber:**
-```python sms.py 2015555555 "hi there!"```
+```./sms 2015555555 "hi there!"```
 
 **Send a message to a contact:**
-```python sms.py jordan "you're a nerd!"```
+```./sms jordan "you're a nerd!"```
 
 **Add a new contact:**
-```python contacts.py add jordan 9739039945```
+```./contacts add jordan 9739039945```
+
+**See your contacts:**
+```./contacts list```
+
+**See your contacts, with a filter (returns everything that contains your string):**
+```./contacts list jo```
 
 This adds a line to a file called `.contacts`. The contents are hand-editable: Simply add a name, a tab (`\t`) and a phonenumber. No spaces in the number. If you get a `no such file` error when running `contacts` for the first time, simply
 ```
