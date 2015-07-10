@@ -11,7 +11,7 @@ def main(argv):
     except ValueError:
         contact = contacts.get_number(contact)
 
-    pybullet.push_sms(contact, argv[1])
+    pybullet.push_sms(contact, ' '.join(argv[1:]))
 
 
 if __name__ == "__main__":

@@ -15,7 +15,9 @@ def add_contact(name, number):
         contacts[name] = number
 
 def get_number(name):
-    return contacts[name]
+    if name in contacts:
+        return contacts[name]
+    return False
 
 
 def list_contacts(prefix=""):

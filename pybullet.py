@@ -5,7 +5,6 @@ import requests
 import json
 
 
-
 def push_sms(number, message):
     url = 'https://api.pushbullet.com/v2/ephemerals'
     values = {
