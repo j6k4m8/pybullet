@@ -1,7 +1,7 @@
 # pybullet
-Use pushbullet from the command line. Featuring `sms 'contactname' 'message-to-send'`
+Use pushbullet from the command line. Featuring `sms [contact] [message]`
 
-Currently a work in progress -- trying to set things up!
+Currently a work in progress &mdash; contributions welcome!
 
 # Setup
 Clone this repo and rename the settings-file.
@@ -14,29 +14,22 @@ Now edit `settings.py` with your own account data. Your account access token is 
 ```
 https://www.pushbullet.com/#devices/XXXXXzzzzzzzzzzz
 ```
-The `XXXXX` is your `user_iden`, the full string is your `device_iden`.
+The `XXXXX` is your `user_iden`, the full `X` and `z` string is your `device_iden`.
 
 # Usage
-**Send a message to a phonenumber:**
-```./sms 2015555555 "hi there!"```
 
-**Send a message to a contact:**
-```./sms jordan "you're a nerd!"```
+| Command | Description |
+|---------|-------------|
+| <kbd>sms 2015555555 "hi there!"</kbd> | Send a message to a phone number |
+| <kbd>contacts add jordan 9739039945</kbd> | Create a new contact |
+| <kbd>sms jordan "you're a nerd!"</kbd> | Send a message to a contact |
+| <kbd>sms jordan and you look goofy too</kbd> | No quotes needed! |
+| <kbd>sms jordan \`ls\` | Send a contact the output of a bash script! Useful! |
+| <kbd>contacts ls</kbd> | Also `contacts list` or `contacts l`: List contacts |
+| <kbd>contacts ls jor</kbd> | Lists all contacts that contain the string `jor` |
 
-**Add a new contact:**
-```./contacts add jordan 9739039945```
 
-**See your contacts:**
-```./contacts list```
-
-**See your contacts, with a filter (returns everything that contains your string):**
-```./contacts list jo```
-
-This adds a line to a file called `.contacts`. The contents are hand-editable: Simply add a name, a tab (`\t`) and a phonenumber. No spaces in the number. If you get a `no such file` error when running `contacts` for the first time, simply
-```
-touch .contacts
-```
-and you're good to go.
+`contacts add` adds a line to a file called `.contacts`. The contents are hand-editable: Simply add a name, a tab (`\t`) and a phonenumber. No spaces in the number. If you get a `no such file` error when running `contacts` for the first time, simply <kbd>touch .contacts</kbd> and you're good to go.
 
 # Contributing
 Pull-requests welcome!
