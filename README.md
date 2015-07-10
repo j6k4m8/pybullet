@@ -35,4 +35,4 @@ In another shell (I use `tmux`), run <kbd>python ./stream.py</kbd>. This will op
 `contacts add` adds a line to a file called `.contacts`. The contents are hand-editable: Simply add a name, a tab (`\t`) and a phonenumber. No spaces in the number. If you get a `no such file` error when running `contacts` for the first time, simply <kbd>touch .contacts</kbd> and you're good to go.
 
 # Contributing
-Pull-requests welcome!
+Pull-requests welcome! Bug reports (via [the Issues page](https://github.com/j6k4m8/pybullet/issues)) also welcome.
